@@ -15,7 +15,7 @@ Navyvet1125-To-Do-App's mission is to empower teams to work together seamlessly.
 The current tech stack for this project includes:
 
 * Django (Backend Framework)
-* React (Frontend Framework)
+* React (Frontend Library)
 * Redux (State Management)
 * PostgreSQL (Database)
 
