@@ -10,7 +10,7 @@ const Footer = () => {
     };
     return (
         <footer>
-            <Navbar bg="dark" variant="dark" sticky='bottom'>
+            <Navbar bg="dark" variant="dark" fixed='bottom' fill>
                 <Nav className="mr-auto">
                     <Nav.Link onClick={() => handleClick("/")}>Home</Nav.Link>
                     <Nav.Link onClick={() => handleClick("/test")}>Test</Nav.Link>

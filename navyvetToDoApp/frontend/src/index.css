@@ -23,11 +23,18 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
+}
+
+
+
+main {
   display: flex;
-  /* place-items: center; */
-  min-width: 320px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   min-height: 100dvh;
+  max-width: 100dvw;
 }
 
 h1 {
@@ -53,6 +60,7 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
 
 @media (prefers-color-scheme: light) {
   :root {

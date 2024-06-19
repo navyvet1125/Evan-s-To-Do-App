@@ -29,10 +29,6 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <p>
-        View profile <Link to="/profile">here</Link>.<br />
-        Click <Link to="/test">here</Link> to test.
-      </p>
     </>
   )
 }
