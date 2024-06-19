@@ -53,10 +53,16 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "navyvetToDoApp.urls"
 
+
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [
+            BASE_DIR.joinpath('frontend', 'build'),
+            BASE_DIR.joinpath('frontend', 'build', 'static'),
+            BASE_DIR.joinpath('frontend', 'build', 'public'),
+        ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -119,7 +125,18 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
+# Additional locations of static files
+STATICFILES_DIRS = [
 
-DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+    BASE_DIR.joinpath("frontend", "build", "static"),
+    BASE_DIR.joinpath("frontend", "build"),
+]
+# The URL to use when referring to static files located in STATIC_ROOT.
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
+# The absolute path to the directory where collectstatic will collect static files for deployment.
+STATIC_ROOT = BASE_DIR.joinpath("static")
+# The list of finder backends that know how to find static files in various locations.
+STATICFILES_FINDERS = [
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+]
