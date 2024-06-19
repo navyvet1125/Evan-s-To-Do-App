@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-o+56#*(3+s805l*k3qexckp((gso)pn(8_8od-6y%1g12!cxx("
+SECRET_KEY = "django-insecure-x_94e8(zdfk&5z-z8kjb!^gf^yo4s_l%spt^glzsiqv4fd1-(e"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -32,13 +32,13 @@ CSRF_TRUSTED_ORIGINS = ['https://localhost:8000']
 # Application definition
 
 INSTALLED_APPS = [
+    "todos",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "todos.apps.TodosConfig",
 ]
 
 MIDDLEWARE = [
@@ -56,13 +56,7 @@ ROOT_URLCONF = "navyvetToDoApp.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [
-            BASE_DIR.joinpath('frontend', 'dist'),
-            BASE_DIR.joinpath('frontend', 'dist'),
-            BASE_DIR.joinpath('frontend', 'dist', 'assets'),
-            BASE_DIR.joinpath('frontend', 'dist')
-
-        ],
+        "DIRS": [],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -123,13 +117,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = "frontend/"
+STATIC_URL = "static/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
-STATICFILES_DIRS = [
-    BASE_DIR.joinpath('frontend', 'dist'),
-]
