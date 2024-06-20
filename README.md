@@ -19,6 +19,11 @@ The current tech stack for this project includes:
 * Redux (State Management)
 * PostgreSQL (Database)
 
+**Flowchart**
+
+![[Navyvet1125-To-Do-App]](https://raw.githubusercontent.com/navyvet1125/Navyvet1125-To-Do-App/8840d21a7e3d0c3930d7067f6af13679e45b339e/To-Do%20App%20Flow.png)
+
+
 **Future Enhancements**
 
 * Trello board integration for real-time sprint visualization
