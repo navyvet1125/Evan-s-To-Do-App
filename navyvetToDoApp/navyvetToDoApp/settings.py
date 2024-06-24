@@ -123,18 +123,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_ROOT = None
+STATIC_URL = "/build/"
 
 # Additional locations of static files
 STATICFILES_DIRS = [
-
-    BASE_DIR.joinpath("frontend", "build", "static"),
-    BASE_DIR.joinpath("frontend", "build"),
+    BASE_DIR / 'frontend/build/static',
+    BASE_DIR / 'frontend/build',
 ]
 # The URL to use when referring to static files located in STATIC_ROOT.
 STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 # The absolute path to the directory where collectstatic will collect static files for deployment.
-STATIC_ROOT = BASE_DIR.joinpath("static")
+STATIC_ROOT = BASE_DIR.joinpath("frontend")
 # The list of finder backends that know how to find static files in various locations.
 STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",

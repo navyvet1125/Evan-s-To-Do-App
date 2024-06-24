@@ -5,12 +5,12 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   root: '.',
-  base: './',
+  base: '/build/',
   publicDir: 'public',
   build: {
-    outDir: '../build',
+    outDir: './build',
     assetsDir: 'static',
-    // assetsInclude: ['**/*.png', '**/*.jpg', '**/*.svg', '**/*.gif'],
-    emptyOutDir: true,
+    manifest: true,
+    sourcemap: true,
   }
 })
