@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import questionImg from '../public/question.png'
 import './App.css'
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
   return (
     <>
       <h1>Test Page</h1>
+      <img src={questionImg} className="logo" alt="question" />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import evan1 from '../assets/evan1.jpg'
 import '../App.css'
 
 function App() {
@@ -13,7 +12,8 @@ function App() {
     <>
       <Row className="justify-content-md-center">
         <Col md="4">
-          <Image src={evan1} alt="Evan" fluid/>
+          <Image src="/evan1.jpg" alt="Evan" fluid/>
+          <Image src="/question.png" alt="question" fluid/>
         </Col>
       </Row>
       <h1>Evan J. Washington</h1>
