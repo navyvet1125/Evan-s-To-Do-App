@@ -8,7 +8,7 @@ import App from './App.tsx'
 import Layout from './layout/Layout.tsx';
 import DashboardLayout from './layout/DashboardLayout.tsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import './index.css'
+import './index.css'
 
 const router = createBrowserRouter([
   {
