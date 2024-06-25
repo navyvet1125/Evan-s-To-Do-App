@@ -1,0 +1,140 @@
+.icon-home {
+    width: 24px;
+    position: relative;
+    height: 24px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.home {
+    position: relative;
+    line-height: 100%;
+    font-weight: 600;
+}
+.icon-home-parent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.frame-wrapper {
+    border-radius: 8px;
+    border: 1px solid #28353d;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 8px 16px;
+    color: #28353d;
+}
+.vuesaxoutlineelement-4-icon {
+    width: 24px;
+    position: relative;
+    height: 24px;
+}
+.dashboard {
+    position: relative;
+    line-height: 100%;
+}
+.frame-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 56px;
+}
+.notification-wrapper {
+    border-radius: 32px;
+    background-color: #ffd2d2;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 8px;
+}
+.icon-search {
+    width: 20px;
+    position: relative;
+    height: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.iam-looking-for-parent {
+    border-radius: 32px;
+    border: 1px solid #8a9ca7;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    gap: 144px;
+}
+.frame-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+    font-size: 14px;
+    color: #8a9ca7;
+}
+.frame-parent {
+    position: absolute;
+    top: 20px;
+    left: 316px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 120px;
+}
+.navyvet-logo-icon {
+    position: absolute;
+    top: 20px;
+    left: 64px;
+    width: 83px;
+    height: 39px;
+    overflow: hidden;
+}
+.lowes-navbar-80px-light {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    background-color: #fbfbfb;
+    width: 1440px;
+    height: 80px;
+    overflow: hidden;
+}
+.frame-wrapper1 {
+    border-radius: 8px;
+    border: 1px solid #8a9ca7;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 8px 16px;
+    color: #fbfbfb;
+}
+.lowes-navbar-80px-dark {
+    position: absolute;
+    top: 210px;
+    left: 30px;
+    background-color: #151d20;
+    width: 1440px;
+    height: 80px;
+    overflow: hidden;
+    color: #a7b5be;
+}
+.navbar-lowes {
+    width: 100%;
+    position: relative;
+    border: 1px solid #28353d;
+    box-sizing: border-box;
+    height: 340px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 16px;
+    color: #6d8493;
+    font-family: Inter;
+}
+
