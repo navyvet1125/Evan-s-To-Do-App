@@ -61,13 +61,24 @@ class TodoItem(models.Model):
         default='M',
     )
     CATEGORY_CHOICES = [
-        ('P', 'Personal'),
-        ('W', 'Work'),
-        ('S', 'School'),
-        ('O', 'Other'),
+    ('P', 'Personal'),
+    ('W', 'Work'),
+    ('S', 'School'),
+    ('H', 'Health'),
+    ('F', 'Finance'),
+    ('SH', 'Shopping'),
+    ('FA', 'Family'),
+    ('HO', 'Home'),
+    ('E', 'Entertainment'),
+    ('T', 'Travel'),
+    ('HB', 'Hobbies'),
+    ('U', 'Urgent'),
+    ('L', 'Long-term'),
+    ('O', 'Other'),
     ]
+    
     category = models.CharField(
-        max_length=1,
+        max_length=2,
         choices=CATEGORY_CHOICES,
         default='O',
     )
