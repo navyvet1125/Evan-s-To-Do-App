@@ -4,10 +4,14 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
+import { log } from './logger'; 
 import App from './App.tsx'
 import Layout from './layout/Layout.tsx';
 import DashboardLayout from './layout/DashboardLayout.tsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+log('App started', 'info');
 
 const router = createBrowserRouter([
   {
