@@ -1,3 +1,26 @@
 .nav-items {
     text-align: left;
 }
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  height: 90dvh; /* Adjust based on your layout */
+}
+
+.center-links {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bottom-links {
+    margin-top: auto;
+}
+
+.separator {
+    width: '100%';
+    height: '1px';
+    background-color: '#ddd';
+    margin: 10px 0;
+}

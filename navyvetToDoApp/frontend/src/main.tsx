@@ -12,7 +12,8 @@ import {
 
 import { log } from './logger'; 
 import App from './App.tsx'
-import ListView from './components/ListView.tsx';
+import ListsView from './components/ListsView.tsx'
+import DetailListView from './components/DetailListView.tsx';
 import Layout from './layout/Layout.tsx';
 import DashboardLayout from './layout/DashboardLayout.tsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -20,12 +21,12 @@ import ErrorPage from './components/Error.tsx';
 
 log('App started', 'info');
 
-function ListViewWrapper() {
+function DetailListViewWrapper() {
   const { listId } = useParams<{ listId: string }>();
   if (!listId) {
     return <Navigate to="*" replace />;
   }
-  return <ListView listId={listId} />;
+  return <DetailListView listId={listId} />;
 }
 
 const router = createBrowserRouter([
@@ -40,8 +41,8 @@ const router = createBrowserRouter([
     path: "/dashboard",
     element: <DashboardLayout />,
     children: [
-      {path: "/dashboard", element: <App />},
-      {path: "/dashboard/:listId", element: <ListViewWrapper />}
+      {path: "/dashboard", element: <ListsView />},
+      {path: "/dashboard/:listId", element: <DetailListViewWrapper />}
     ]
   },
   {

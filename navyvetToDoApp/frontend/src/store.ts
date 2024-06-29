@@ -42,6 +42,12 @@ const listsSlice = createSlice({
         delete state[listIndex].completed;
       }
     },
+    toggleListCompletion: (state, action: PayloadAction<string>) => {
+      const listIndex = state.findIndex(list => list.id === action.payload);
+      if (listIndex !== -1) {
+        state[listIndex].completed = state[listIndex].completed ? undefined : { timeCompleted: new Date() };
+      }
+    }
   },
 });
 
@@ -81,11 +87,17 @@ const TasksSlice = createSlice({
         delete state[itemIndex].completed;
       }
     },
+    toggleCompletion: (state, action: PayloadAction<string>) => {
+      const itemIndex = state.findIndex(item => item.id === action.payload);
+      if (itemIndex !== -1) {
+        state[itemIndex].completed = state[itemIndex].completed ? undefined : { timeCompleted: new Date() };
+      }
+    },
   },
 });
 
-export const { addList, removeList, updateList } = listsSlice.actions;
-export const { addTask, removeTask, updateTask, completeTask, uncompleteTask } = TasksSlice.actions;
+export const { addList, removeList, updateList, completeList, uncompleteList, toggleListCompletion } = listsSlice.actions;
+export const { addTask, removeTask, removeTasksByListId, updateTask, completeTask, uncompleteTask, toggleCompletion } = TasksSlice.actions;
 export const selectAllLists = (state: { lists: List[] }) => state.lists;
 export const selectListById = (state: { lists: List[] }, listId: string) =>
   state.lists.find(list => list.id === listId);
@@ -93,6 +105,7 @@ export const selectListByCategory = (state: { lists: List[] }, category: Categor
   state.lists.filter(list => list.category === category);
 export const selectListByDueDate = (state: { lists: List[] }, dueDate: Date) =>
   state.lists.filter(list => list.dueDate === dueDate);
+export const selectLastList = (state: { lists: List[] }) => state.lists[state.lists.length - 1];
 
 export const selectAllTasks = (state: { tasks: Task[] }) => state.tasks;
 export const selectTasksByListId = (state: { tasks: Task[] }, listId: string) =>

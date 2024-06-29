@@ -1,20 +1,31 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
-import { useDispatch } from 'react-redux';
-import { addList } from '../store'; // Adjust the import path according to your project structure
+import { useDispatch, useSelector } from 'react-redux';
+import { addList, selectLastList } from '../store'; // Adjust the import path according to your project structure
 import { Category, categoryOptions } from '../models/category';
+import { useNavigate } from 'react-router-dom';
 
 const NewListModal: React.FC<{ show: boolean; handleClose: () => void }> = ({ show, handleClose }) => {
   const [listTitle, setListTitle] = useState('');
   const [listCategory, setListCategory] = useState(categoryOptions[0]);
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState(new Date());
+  const [hasAttemptedToAddList, setHasAttemptedToAddList] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const lastList = useSelector(selectLastList);
+
+  useEffect(() => {
+    if(hasAttemptedToAddList && lastList?.id)  {
+      navigate(`/dashboard/${lastList.id}`);
+      handleClose();
+    }
+  }, [lastList, hasAttemptedToAddList, navigate, handleClose]);
+
 
   const handleSave = () => {
-    console.log('List Name: ', listTitle);
     dispatch(addList({ category: listCategory, description: description, dueDate: dueDate, title: listTitle }));
-    handleClose();
+    setHasAttemptedToAddList(true);
   };
 
   return (

@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import SideNav from './SideNav';
+import DashNavTop from './DashNavTop';
 
 const Layout: React.FC = () => {
     return (
@@ -13,6 +14,7 @@ const Layout: React.FC = () => {
                 <SideNav />
             </Col>
             <Col md={10}>
+              <DashNavTop />
               <Outlet />
             </Col>
         </Row>
